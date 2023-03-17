@@ -10,4 +10,4 @@ $tab = generateGrades(5);
 // affichage des notes colorées
 printGrades($tab);
 
-?>
+// bonne pratique de ne pas refermer la balise php
