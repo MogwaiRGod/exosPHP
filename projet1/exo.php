@@ -5,7 +5,7 @@ include('functions.php');
 
 // tableau de notes de 0 à 20 (x5)
 $tab = generateGrades(5);
-print_r($tab);
+// print_r($tab);
 
 // affichage des notes colorées
 printGrades($tab);
