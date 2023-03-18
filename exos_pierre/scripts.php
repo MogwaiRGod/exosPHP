@@ -49,14 +49,14 @@ $HOST = parse_url('https://www.monsite.com/php-exercises/php-basic-exercises.php
 echo $HOST."<br>";
 // Path = chemin, sur le serveur web, vers la ressource
 $PATH = parse_url('https://www.monsite.com/php-exercises/php-basic-exercises.php', PHP_URL_PATH);
-echo $PATH."<br>";
+echo $PATH."<br><br>";
 
 
 /**
  * Exercice 4
  */
-colorStr("BBBBBBBBBBBBB</br>");
-colorSubstr("BBBBBBBBBBBBBB</br>");
+colorStr("BBBBBBBBBBBBB<br>");
+colorSubstr("BBBBBBBBBBBBBB<br><br>");
 
 
 /**
@@ -99,12 +99,12 @@ for ($i=0; $i<100; $i++) {
     }
 }
 
-echo $sumPrimeNbs."<br>";
+echo "<p>La somme des nombres premiers inférieurs à 100 est : ".$sumPrimeNbs."</p><br>";
 
 
 /**
  * Exercice 7
- * affichez la multiplication des entiers entre 1 et 10 dans une table HTML à double entrée 
- * (colonnes de 1 à 10, lignes de 1 à 10)
  */
+
+ tableMult()."<br>";
  

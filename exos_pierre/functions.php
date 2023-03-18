@@ -72,11 +72,29 @@ function primeNumber($nb) {
 
 // fonction qui génère un tableau 10*10 donc chaque cellule contient le multiple de la rangée/colonne correspondante
 function tableMult() {
-    // génération du header du tableau
-    echo "<table style='border: 1px solid black; cellspacing=0; border-collapse: collapse;'><thead><tr><td>x</td>";
-    for ($i=1; $i<= 10; $i++) {
-        echo "<td style='border: 1px solid black;'>$i</td>";
-    }
+    // initialisation du tableau
+    echo "<table style='border: 1px solid black; cellspacing=0; border-collapse: collapse;'><thead><tr><th>x</th>";
+
+    // génération des données
+    $row = 1;
+    for ($i=0; $i<= 10; $i++) {
+        for ($j=1; $j<=10; $j++) {
+            // pour l'affichage du header (sémantique)
+            if ($i === 0) {
+                echo "<th style='border: 1px solid black;'>$j</th>";
+            }
+            else {
+                echo "<td style='border: 1px solid black;'>".$i * $j."</td>";
+            }
+
+        } // fin pour j
+        echo "</tr><tr>";
+        if ($i !== 10) {
+            echo "<td style='border: 1px solid black; font-weight:bold;'>$row</td>";
+            $row++;
+        }
+    } // fin pour i
+
+    echo "</table>";
     return;
 }
-tableMult();
