@@ -43,20 +43,23 @@ echo "<p>Si l'on continue à s'extasier l'on n'aura plus d'élan</p>";
 $SCHEME = parse_url('https://www.monsite.com/php-exercises/php-basic-exercises.php', PHP_URL_SCHEME);
 // parse_url() prend deux arguments : l'URL (sous forme de chaine) et ce que l'on souhaite en extraire
 // sans le composant de l'URL passé en argument, retourne une tableau associatif de l'URL avec tous les composants
-echo $SCHEME."<br>";
+echo "<p>".$SCHEME."<br>";
 // l'hôte contient le nom de l'hôte et éventuellement le port de l'URL
 $HOST = parse_url('https://www.monsite.com/php-exercises/php-basic-exercises.php', PHP_URL_HOST);
 echo $HOST."<br>";
 // Path = chemin, sur le serveur web, vers la ressource
 $PATH = parse_url('https://www.monsite.com/php-exercises/php-basic-exercises.php', PHP_URL_PATH);
-echo $PATH."<br><br>";
+echo $PATH."<br></p>";
 
 
 /**
  * Exercice 4
  */
-colorStr("BBBBBBBBBBBBB<br>");
-colorSubstr("BBBBBBBBBBBBBB<br><br>");
+echo "<p>";
+colorStr("BBBBBBBBBBBBB");
+echo "<br>";
+colorSubstr("BBBBBBBBBBBBBB");
+echo "</p>";
 
 
 /**
@@ -71,6 +74,7 @@ colorSubstr("BBBBBBBBBBBBBB<br><br>");
  */
 $d = "A00";
 
+echo "<p>";
 // on va incrémenter le dernier nombre, mais en soi on aurait pu également seulement le remplacer par le $i de la boucle
 for ($i=0; $i<5; $i++) {
     // on sélectionne, dans la chaîne, le nombre à incrémenter
@@ -80,7 +84,7 @@ for ($i=0; $i<5; $i++) {
     $d = substr($d, 0, 2).$incr;
     echo $d."<br>";
 }
-
+echo "</p>";
 
 /**
  * Exercice 6
@@ -90,17 +94,22 @@ for ($i=0; $i<5; $i++) {
  */
 
 $sumPrimeNbs = 0;
+$listPrimeNbs = [];
 
+echo "<p>La liste des nombres premiers < 100 est :</p><ul>";
 // boucle d'adition des nombres premiers
 for ($i=0; $i<100; $i++) {
     // si $i est premier
     if (primeNumber($i)) {
-        // on l'ajoute à la somme des nombres premiers
-        $sumPrimeNbs += $i; 
+        // on l'ajoute à la liste des nombres premiers
+        array_push($listPrimeNbs, $i);
+        echo "<li>$i</li>";
+        // on l'ajoute à la somme des nombres premiers (car c'est demandé je crois ?)
+        $sumPrimeNbs += $i;
     }
 }
 
-echo "<p>La somme des nombres premiers inférieurs à 100 est : ".$sumPrimeNbs."</p><br>";
+echo "</ul><p>La somme des nombres premiers inférieurs à 100 est : ".$sumPrimeNbs."<br></p>";
 
 
 /**
@@ -108,7 +117,7 @@ echo "<p>La somme des nombres premiers inférieurs à 100 est : ".$sumPrimeNbs."
  */
 
 // affichage de la table de multiplication
-tableMult()."<br>";
+tableMult();
 
 
 /**
@@ -120,7 +129,7 @@ tableMult()."<br>";
  * Exercice 9
  */
 // affichage du compteur de voyelles de la chaîne ci-dessous
-echo countVowels("Il y a 7 voyelles")."<br><br>";
+echo "<p>La chaîne 'Il y a 7 voyelles' contient ".countVowels("Il y a 7 voyelles")." voyelles.</p>";
 
 
 /**
@@ -137,7 +146,7 @@ echo $countFuncCalls;
 // appel 2
 $countFuncCalls = limitedFunc($countFuncCalls, 3);
 echo $countFuncCalls;
-// appel3
+// appel 3
 $countFuncCalls = limitedFunc($countFuncCalls, 3);
 echo $countFuncCalls;
 // à partir de là, plus rien ne s'affiche sur la page
