@@ -45,13 +45,13 @@ function primeNumber($nb) {
     if ($nb === 1 || $nb === 0) {
         return false;
     } 
-    // 2 est premier mais ne peut pas rentré dans la boucle suivante
+    // 2 est premier mais ne peut pas rentrer dans la boucle suivante
     elseif ($nb === 2) {
         return true;
     }
 
     // on va vérifier la divisibilité de $nb pour tous les nombres jusqu'à la moitié de $nb
-    // car au-delà, il ne peut le contenir un nombre un nombre entier de fois
+    // car au-delà, il ne peut le contenir un nombre entier de fois
     for ($i=2; $i<intval($nb/2)+1 /*intval() retourne la partie entière d'un nombre*/; $i++) {
         // si $nb est divisible par un nombre
         if($nb/$i === intval($nb/$i)) {
