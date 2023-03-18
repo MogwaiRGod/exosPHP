@@ -73,7 +73,7 @@ function primeNumber($nb) {
 // fonction qui génère un tableau 10*10 donc chaque cellule contient le multiple de la rangée/colonne correspondante
 function tableMult() {
     // initialisation du tableau
-    echo "<table style='border: 1px solid black; cellspacing=0; border-collapse: collapse;'><thead><tr><th>x</th>";
+    echo "<table style='border: 1px solid black; cellspacing=0; border-collapse: collapse; text-align: center;'><thead><tr><th>x</th>";
 
     // génération des données
     $row = 1;
@@ -106,11 +106,57 @@ function tableMult() {
 /**
  * Exercice 8
  * ecrivez un programme PHP pour résoudre l'équation 
- * ax + by = c 
- * dx + ey = f
+ * x(a-d) + y(b-e) - c + f = 0
  * (http://serge.mehl.free.fr/anx/equ1.html#:~:text=Pour%20r%C3%A9soudre%20une%20%C3%A9quation%20du,%E2%87%94%20x%20%3D%205%2F6.)
  */
 
+function solveEquation() {
+    // KOMPREN PA
+}
 
 
+/**
+ * Exercice 9
+ * ecrivez un script PHP pour compter le nombre de voyelles d'un mot (d'une chaine) passé(e) en argument
+ */
 
+function countVowels($str) {
+    // tableau de voyelles
+    $vowels = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'Y', 'y'];
+
+    // array_search($needle /* occurrence à trouver */, $haystack /* expression */)
+    // array_search() va chercher l'item demandé et si elle la trouve, retourne sa clef/index, sinon faux
+
+    // on transforme la chaîne en tableau
+    // (on aurait pu boucler dedans avec une boucle pour classique sinon)
+    $str = str_split($str);
+    $total=0;
+    foreach($str as $car) {
+        // obligé de préciser false dans la condition car sinon, si l'index du caractère est 0, la condition ne se vérifie pas
+        if (array_search($car, $vowels) !== false) {
+            $total++;
+        }
+    }
+    return $total;
+}
+
+
+/**
+ * Exercice 10
+ */
+
+// fonction qui compte le nombre et retourne le nombre de fois qu'elle a été invoquée ($count étant le compteur entré en argument), 
+// et qui retourne NULL si elle été appelée au-delà de la limite ($lim) entrée en argument
+function limitedFunc($count, $lim) {
+    // incrémentation du compteur
+    if (is_null($count)) {
+        return NULL;
+
+    }
+    $count++;
+    if ($count > $lim) {
+        return NULL;
+    }
+
+    return $count;
+}

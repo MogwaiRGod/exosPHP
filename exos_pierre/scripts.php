@@ -106,5 +106,41 @@ echo "<p>La somme des nombres premiers inférieurs à 100 est : ".$sumPrimeNbs."
  * Exercice 7
  */
 
- tableMult()."<br>";
+// affichage de la table de multiplication
+tableMult()."<br>";
+
+
+/**
+ * Exercice 8
+ */
  
+
+/**
+ * Exercice 9
+ */
+// affichage du compteur de voyelles de la chaîne ci-dessous
+echo countVowels("Il y a 7 voyelles")."<br><br>";
+
+
+/**
+ * Exercice 10
+ * ecrivez un script PHP qui compte le nombre de fois qu'une fonction a été appelée et permet de limiter ce nombre ... 
+ * si la fonction est appelée plus que prévu, elle retourne NULL
+ */
+
+// initialisation du compteur d'invocation de la fonction limitedFunc
+$countFuncCalls = 0;
+// appel 1
+$countFuncCalls = limitedFunc($countFuncCalls, 3 /* nombre de fois max d'invocation de la fonction */);
+echo $countFuncCalls;
+// appel 2
+$countFuncCalls = limitedFunc($countFuncCalls, 3);
+echo $countFuncCalls;
+// appel3
+$countFuncCalls = limitedFunc($countFuncCalls, 3);
+echo $countFuncCalls;
+// à partir de là, plus rien ne s'affiche sur la page
+$countFuncCalls = limitedFunc($countFuncCalls, 3);
+echo $countFuncCalls;
+$countFuncCalls = limitedFunc($countFuncCalls, 6);
+echo $countFuncCalls;
