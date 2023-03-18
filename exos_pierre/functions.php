@@ -64,3 +64,19 @@ function primeNumber($nb) {
 } 
 
 
+/**
+ * Exercice 7
+ * affichez la multiplication des entiers entre 1 et 10 dans une table HTML à double entrée 
+ * (colonnes de 1 à 10, lignes de 1 à 10)
+ */
+
+// fonction qui génère un tableau 10*10 donc chaque cellule contient le multiple de la rangée/colonne correspondante
+function tableMult() {
+    // génération du header du tableau
+    echo "<table style='border: 1px solid black; cellspacing=0; border-collapse: collapse;'><thead><tr><td>x</td>";
+    for ($i=1; $i<= 10; $i++) {
+        echo "<td style='border: 1px solid black;'>$i</td>";
+    }
+    return;
+}
+tableMult();

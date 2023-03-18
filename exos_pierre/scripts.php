@@ -100,3 +100,11 @@ for ($i=0; $i<100; $i++) {
 }
 
 echo $sumPrimeNbs."<br>";
+
+
+/**
+ * Exercice 7
+ * affichez la multiplication des entiers entre 1 et 10 dans une table HTML à double entrée 
+ * (colonnes de 1 à 10, lignes de 1 à 10)
+ */
+ 
