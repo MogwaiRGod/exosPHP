@@ -1,7 +1,7 @@
 <?php
 
 // Pour importer un fichier PHP dans un autre fichier PHP
-include('functions.php');
+include 'functions.php';
 
 // tableau de notes de 0 à 20 (x5)
 $tab = generateGrades(5);
