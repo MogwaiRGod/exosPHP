@@ -90,11 +90,27 @@ function tableMult() {
         } // fin pour j
         echo "</tr><tr>";
         if ($i !== 10) {
+            // ouverture du tbody (sémantique)
+            if ($i === 0) {
+                echo "<tbody>";
+            }
             echo "<td style='border: 1px solid black; font-weight:bold;'>$row</td>";
             $row++;
         }
     } // fin pour i
-
-    echo "</table>";
+    echo "</tbody></table>";
     return;
 }
+
+
+/**
+ * Exercice 8
+ * ecrivez un programme PHP pour résoudre l'équation 
+ * ax + by = c 
+ * dx + ey = f
+ * (http://serge.mehl.free.fr/anx/equ1.html#:~:text=Pour%20r%C3%A9soudre%20une%20%C3%A9quation%20du,%E2%87%94%20x%20%3D%205%2F6.)
+ */
+
+
+
+
