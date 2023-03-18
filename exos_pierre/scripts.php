@@ -73,7 +73,7 @@ $d = "A00";
 
 // on va incrémenter le dernier nombre, mais en soi on aurait pu également seulement le remplacer par le $i de la boucle
 for ($i=0; $i<5; $i++) {
-    // on sélectionne, dans la chaîne, le nombre à incrémenté
+    // on sélectionne, dans la chaîne, le nombre à incrémenter
     $incr = (int)$d[2];
     $incr++;
     // on affiche les deux premiers caractères de la chaîne puis le nombre incrémenté
@@ -91,6 +91,7 @@ for ($i=0; $i<5; $i++) {
 
 $sumPrimeNbs = 0;
 
+// boucle d'adition des nombres premiers
 for ($i=0; $i<100; $i++) {
     // si $i est premier
     if (primeNumber($i)) {

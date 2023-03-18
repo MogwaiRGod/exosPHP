@@ -4,7 +4,6 @@
  * Exercice 4
  * Ecrivez un script php qui colorie (et affiche) en bleu le premier caractère d'un mot ou d'une chaine passée en argument 
  */
-
 // fonction qui, pour une chaîne $str entrée en argument, l'affiche avec la première lettre coloriée
 // version avec boucle (à la mano)
 // ne retourne rien
@@ -42,7 +41,7 @@ function colorSubstr($str) {
 // fonction qui, pour un entier positif non-nul entré en argument, retourne un booléen selon s'il est premier ou non
 function primeNumber($nb) {
     // 1 n'est pas premier
-    if ($nb === 1 || $nb === 0) {
+    if ($nb === 1 || $nb <= 0) {
         return false;
     } 
     // 2 est premier mais ne peut pas rentrer dans la boucle suivante
@@ -122,10 +121,12 @@ function solveEquation() {
 
 function countVowels($str) {
     // tableau de voyelles
+    // on aurait pu passer la chaine en bas-de-casse strtolower($str) afin de se
+    // simplifier la vie 
     $vowels = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'Y', 'y'];
 
-    // array_search($needle /* occurrence à trouver */, $haystack /* expression */)
-    // array_search() va chercher l'item demandé et si elle la trouve, retourne sa clef/index, sinon faux
+    // array_search($needle /* item à trouver */, $haystack /* expression */)
+    // array_search() va chercher l'item demandé et si elle le trouve, retourne sa clef/index, sinon faux
 
     // on transforme la chaîne en tableau
     // (on aurait pu boucler dedans avec une boucle pour classique sinon)
