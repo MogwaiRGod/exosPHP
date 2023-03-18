@@ -152,5 +152,5 @@ echo $countFuncCalls;
 // à partir de là, plus rien ne s'affiche sur la page
 $countFuncCalls = limitedFunc($countFuncCalls, 3);
 echo $countFuncCalls;
-$countFuncCalls = limitedFunc($countFuncCalls, 6);
+$countFuncCalls = limitedFunc($countFuncCalls, 3);
 echo $countFuncCalls;
