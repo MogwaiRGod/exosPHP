@@ -101,10 +101,10 @@ echo "<p>La liste des nombres premiers < 100 est :</p><ul>";
 for ($i=0; $i<100; $i++) {
     // si $i est premier
     if (primeNumber($i)) {
-        // on l'ajoute à la liste des nombres premiers
+        // on l'ajoute à la liste des nombres premiers(car c'est demandé je crois ?)
         array_push($listPrimeNbs, $i);
         echo "<li>$i</li>";
-        // on l'ajoute à la somme des nombres premiers (car c'est demandé je crois ?)
+        // on l'ajoute à la somme des nombres premiers 
         $sumPrimeNbs += $i;
     }
 }
