@@ -138,19 +138,44 @@ echo "<p>La chaîne 'Il y a 7 voyelles' contient ".countVowels("Il y a 7 voyelle
  * si la fonction est appelée plus que prévu, elle retourne NULL
  */
 
-// initialisation du compteur d'invocation de la fonction limitedFunc
-$countFuncCalls = 0;
-// appel 1
-$countFuncCalls = limitedFunc($countFuncCalls, 3 /* nombre de fois max d'invocation de la fonction */);
-echo $countFuncCalls;
+// compteur d'appel de la fonction : portée globale
+$count = 0;
+// choix d'une limite d'appel de la fonction
+$limCall = 3;
+
+echo "<p>La fonction ne doit pas être appelée plus de : $limCall fois.<br>";
+
+// appel 1 + affichage du résultat de la fonction : soit le compteur si on est sous la limite, soit null
+echo 'appel '. $count+1;
+echo ': '.limitedFunc($limCall).'<br>';
+
 // appel 2
-$countFuncCalls = limitedFunc($countFuncCalls, 3);
-echo $countFuncCalls;
+echo 'appel '. $count+1;
+echo ': '.limitedFunc($limCall).'<br>';
+
 // appel 3
-$countFuncCalls = limitedFunc($countFuncCalls, 3);
-echo $countFuncCalls;
-// à partir de là, plus rien ne s'affiche sur la page
-$countFuncCalls = limitedFunc($countFuncCalls, 3);
-echo $countFuncCalls;
-$countFuncCalls = limitedFunc($countFuncCalls, 3);
-echo $countFuncCalls;
+echo 'appel '. $count+1;
+echo ': '.limitedFunc($limCall).'<br>';
+
+// appel 4 ; retourne null désormais
+echo 'appel '. $count+1;
+echo ': '.limitedFunc($limCall).'<br>';
+
+// si on change la limite
+$limCall = 8;
+echo "<p>La fonction ne doit pas être appelée plus de : $limCall fois.<br>";
+
+// appel 5 => devrait retourner le compteur à nouveau
+echo 'appel '. $count+1;
+echo ': '.limitedFunc($limCall).'<br>';
+// appel 6
+echo 'appel '. $count+1;
+echo ': '.limitedFunc($limCall).'<br>';
+
+// si on change la limite à nouveau
+$limCall = 2;
+echo "<p>La fonction ne doit pas être appelée plus de : $limCall fois.<br>";
+
+// appel 7 => devrait retourner null à nouveau
+echo 'appel '. $count+1;
+echo ': '.limitedFunc($limCall).'</p>';

@@ -150,12 +150,14 @@ function countVowels($str) {
 
 // fonction qui compte le nombre et retourne le nombre de fois qu'elle a été invoquée ($count étant le compteur entré en argument), 
 // et qui retourne NULL si elle été appelée au-delà de la limite ($lim) entrée en argument
-function limitedFunc($count, $lim) {
-    // incrémentation du compteur
-    if (is_null($count)) {
-        return NULL;
-    }
+function limitedFunc($lim) {
+    // global pour récupérer la variable hors de la portée de la fonction
+    global $count;
+
+    // on incrémente le compteur
     $count++;
+
+    // et on vérifie que la limite n'est pas dépassée
     if ($count > $lim) {
         return NULL;
     }
