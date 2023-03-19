@@ -120,12 +120,6 @@ function solveEquation($a, $b, $c, $d, $e, $f) {
     return ($add/$div)/($coeff/$div);
 }
 
-echo "<p>La solution à<br> 1x + 2y = 3<br> 4x + 5y = 6<br>";
-echo "est x = ".solveEquation(1, 2, 3, 4, 5, 6)."<br></p>";
-
-echo "<p>La solution à<br> 12x -3y = 7<br> -9x + 50y = -2<br>";
-echo "est x = ".solveEquation(12, -3, 7, -9, 50, -2)."<br></p>";
-
 
 /**
  * Exercice 9
