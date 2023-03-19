@@ -113,9 +113,14 @@ function tableMult() {
  */
 
 function solveEquation($a, $b, $c, $d, $e, $f) {
-    echo "(".$a - $d.")x -".$c -$f."-y*(".-$e+$b.")=0";
+    $coeff = $a - $d;
+    $add = -$c + $f;
+    $div = $e - $b;
+
+    $x, $y;
+    return $coeff/$div."x +".$add/$div." = y";
 }
-solveEquation(1, 2, 3, 4, 5, 6);
+echo "<p>".solveEquation(1, 2, 3, 4, 5, 6)."<br></p>";
 
 
 /**
