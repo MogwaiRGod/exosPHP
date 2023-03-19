@@ -148,7 +148,7 @@ function countVowels($str) {
  * Exercice 10
  */
 
-// fonction qui compte le nombre et retourne le nombre de fois qu'elle a été invoquée ($count étant le compteur entré en argument), 
+// fonction qui compte et retourne le nombre de fois qu'elle a été invoquée au total dans le script, 
 // et qui retourne NULL si elle été appelée au-delà de la limite ($lim) entrée en argument
 function limitedFunc($lim) {
     // global pour récupérer la variable hors de la portée de la fonction
