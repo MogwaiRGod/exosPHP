@@ -107,7 +107,8 @@ function tableMult() {
 /**
  * Exercice 8
  * ecrivez un programme PHP pour résoudre l'équation 
- * x(a-d) +  - c + f = 0
+ * ax + by = c 
+ * dx + ey = f
  * (http://serge.mehl.free.fr/anx/equ1.html#:~:text=Pour%20r%C3%A9soudre%20une%20%C3%A9quation%20du,%E2%87%94%20x%20%3D%205%2F6.)
  */
 
@@ -115,6 +116,7 @@ function solveEquation($a, $b, $c, $d, $e, $f) {
     echo "(".$a - $d.")x -".$c -$f."-y*(".-$e+$b.")=0";
 }
 solveEquation(1, 2, 3, 4, 5, 6);
+
 
 /**
  * Exercice 9
