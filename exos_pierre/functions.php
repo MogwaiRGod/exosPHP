@@ -117,7 +117,6 @@ function solveEquation($a, $b, $c, $d, $e, $f) {
     $add = -$c + $f;
     $div = $e - $b;
 
-    $x, $y;
     return $coeff/$div."x +".$add/$div." = y";
 }
 echo "<p>".solveEquation(1, 2, 3, 4, 5, 6)."<br></p>";
