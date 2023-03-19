@@ -134,7 +134,7 @@ echo "<p>La chaîne 'Il y a 7 voyelles' contient ".countVowels("Il y a 7 voyelle
 
 /**
  * Exercice 10
- * ecrivez un script PHP qui compte le nombre de fois qu'une fonction a été appelée et permet de limiter ce nombre ... 
+ * ecrivez un script PHP qui compte le nombre de fois qu'une fonction a été appelée et permet de limiter ce nombre... 
  * si la fonction est appelée plus que prévu, elle retourne NULL
  */
 

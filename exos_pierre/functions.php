@@ -53,6 +53,8 @@ function primeNumber($nb) {
     // car au-delà, il ne peut le contenir un nombre entier de fois
     for ($i=2; $i<intval($nb/2)+1 /*intval() retourne la partie entière d'un nombre*/; $i++) {
         // si $nb est divisible par un nombre
+        // on aurait pu également utiliser un modulo (plus classe) :
+        // if($nb%$i === 0) { ... }
         if($nb/$i === intval($nb/$i)) {
             // on retourne faux
             return false;
@@ -105,14 +107,14 @@ function tableMult() {
 /**
  * Exercice 8
  * ecrivez un programme PHP pour résoudre l'équation 
- * x(a-d) + y(b-e) - c + f = 0
+ * x(a-d) +  - c + f = 0
  * (http://serge.mehl.free.fr/anx/equ1.html#:~:text=Pour%20r%C3%A9soudre%20une%20%C3%A9quation%20du,%E2%87%94%20x%20%3D%205%2F6.)
  */
 
-function solveEquation() {
-    // KOMPREN PA
+function solveEquation($a, $b, $c, $d, $e, $f) {
+    echo "(".$a - $d.")x -".$c -$f."-y*(".-$e+$b.")=0";
 }
-
+solveEquation(1, 2, 3, 4, 5, 6);
 
 /**
  * Exercice 9
@@ -152,7 +154,6 @@ function limitedFunc($count, $lim) {
     // incrémentation du compteur
     if (is_null($count)) {
         return NULL;
-
     }
     $count++;
     if ($count > $lim) {
